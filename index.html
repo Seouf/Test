@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Este eh o titulo da pagina.</title>
+        <link rel="stylesheet" type="text/css" href="styles.css" />
+    </head>
+    <body>
+        <h1>Olá mundo!</h1>
+        <p>Lorem <b>ipsum</b> <i>dolor</i> <strike>sit</strike> amet consectetur adipisicing elit. </p>
+        <p>Assumenda hic, eius et dolor inventore esse. Fuga id!</p>
+        A<br />
+        B<br />
+        C
+         <br />
+         <br />
+
+         <button id="contador">+1</button>
+         <span id="atual">0</span>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script type="text/javascript">
+            var $contador = $('#contador')
+            var $atual = $('#atual')
+
+            $contador.on('click', function() {
+                let valor = $atual.text()
+                valor = parseInt(valor)
+                valor = valor + 1
+
+                $atual.text(valor)
+                console.log(valor)
+            })
+        </script>
+    </body>
+</html>
