@@ -1,5 +1,10 @@
-/*Estilizando atraves de tags */
-body {
-    padding: 28px;
-    font-family: cursive;
+<style>
+body{
+    background-color:aliceblue;
+    background-color:antiquewhite;
+    background-color: aqua;
+    background-color: ;
+}
+body{
+    background-color: antiquewhite;
 }

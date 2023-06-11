@@ -1,34 +1,30 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Este eh o titulo da pagina.</title>
-        <link rel="stylesheet" type="text/css" href="styles.css" />
+        <title>Site LGBT aleatorio</title>
     </head>
     <body>
-        <h1>Olá mundo!</h1>
-        <p>Lorem <b>ipsum</b> <i>dolor</i> <strike>sit</strike> amet consectetur adipisicing elit. </p>
-        <p>Assumenda hic, eius et dolor inventore esse. Fuga id!</p>
-        A<br />
-        B<br />
-        C
-         <br />
-         <br />
+        <p> Este botao muda a pagina para uma cor aleatoria</p>
+        <button class="botao">Aleatorio</button>
 
-         <button id="contador">+1</button>
-         <span id="atual">0</span>
-
+        <!-- JQuery import -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script type="text/javascript">
-            var $contador = $('#contador')
-            var $atual = $('#atual')
+            $(function() {
 
-            $contador.on('click', function() {
-                let valor = $atual.text()
-                valor = parseInt(valor)
-                valor = valor + 1
+                var colors = ['red', 'blue', 'green', 'grey', 'white', 'yellow', 'purple', 'cyan'],
+                color;
 
-                $atual.text(valor)
-                console.log(valor)
+                $('.botao').click(function() {
+                    var randColor;
+                    do {
+                        randColor = colors[Math.floor(Math.random() * colors.length)];
+                    } while (color == randColor);
+                    $('.botao').css('background-color', randColor);
+                    color=randColor;
+                });
+
+                
             })
         </script>
     </body>
