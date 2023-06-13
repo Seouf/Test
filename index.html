@@ -1,31 +1,36 @@
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>Site LGBT aleatorio</title>
-    </head>
-    <body>
-        <p> Este botao muda a pagina para uma cor aleatoria</p>
-        <button class="botao">Aleatorio</button>
 
-        <!-- JQuery import -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script type="text/javascript">
-            $(function() {
+<head>
+    <meta charset="utf-8">
+    <title>Este é o titulo da pagina.</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
 
-                var colors = ['red', 'blue', 'green', 'grey', 'white', 'yellow', 'purple', 'cyan'],
-                color;
+<body>
+    <h1>Olá mundo!</h1>
+    <p class="umaclasse">Lorem <b>ipsum</b> <i>dolor</i> <strike>sit</strike> amet consectetur adipisicing elit. </p>
+    <p><span id="rubbra">Assumenda</span> hic, eius et <b class="umaclasse">dolor</b> inventore esse. Fuga id!</p>
+    <p class="umaclasse">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+    A<br />
+    B<br />
+    C
+    <br />
+    <br />
 
-                $('.botao').click(function() {
-                    var randColor;
-                    do {
-                        randColor = colors[Math.floor(Math.random() * colors.length)];
-                    } while (color == randColor);
-                    $('.botao').css('background-color', randColor);
-                    color=randColor;
-                });
+    <form action="Processamento.php" method="get">
+        <input type="text" name="nome" /> <input type="text" name="senha" />
+      <button id="botaoform" style="border-color:red" type="submit">Enviar
+      </button>
+    </form>
 
-                
-            })
-        </script>
-    </body>
+    <!-- jQuery import -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Our script -->
+    <script type="text/javascript">
+    </script>
+</body>
+
 </html>
