@@ -1,10 +1,21 @@
-<style>
-body{
-    background-color:aliceblue;
-    background-color:antiquewhite;
-    background-color: aqua;
-    background-color: ;
+#main-content {
+    border: 1px solid green;
+    height:100%;
+    margin:auto;
+    width: 80%;
 }
-body{
-    background-color: antiquewhite;
+
+#side-bar {
+    border: 1px solid red;
+    width: 20%;
+    height: 100%;
+    float: left;
 }
+
+#content {
+    border: 1px solid blue;
+    height:100%;
+    width:79%;
+    float: left;
+}
+

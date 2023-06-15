@@ -7,30 +7,37 @@
 </head>
 
 <body>
-    <h1>Olá mundo!</h1>
-    <p class="umaclasse">Lorem <b>ipsum</b> <i>dolor</i> <strike>sit</strike> amet consectetur adipisicing elit. </p>
-    <p><span id="rubbra">Assumenda</span> hic, eius et <b class="umaclasse">dolor</b> inventore esse. Fuga id!</p>
-    <p class="umaclasse">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-    A<br />
-    B<br />
-    C
-    <br />
-    <br />
 
-    <form action="Processamento.php" method="get">
-        <input type="text" name="nome" /> <input type="text" name="senha" />
-      <button id="botaoform" style="border-color:red" type="submit">Enviar
-      </button>
-    </form>
+    <div id="main-content">
+        <div id="side-bar">
+            <ul>
+                <li><a href="#" data-show="1" display="none" class="aba">Tab 1</a></li>
+                <li><a href="#" data-show="2" display="none" class="aba">Tab 2</a></li>
+                <li><a href="#" data-show="3" display="none" class="aba">Tab 3</a></li>
+            </ul>
+        </div>
+        <div id="content">
+            <span id="tab-1" class="texto" style="display:none">Esta página está com um texto interessante sobre camelos <br /></span>
+            <span id="tab-2" class="texto" style="display:none">Esta página está com um texto mais ou menos sobre cavalos <br /></span>
+            <span id="tab-3" class="texto" style="display:none">Esta página está com alguma coisa ai<br /></span>
+        </div>
+     </div>
 
-    <!-- jQuery import -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
         integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-    <!-- Our script -->
     <script type="text/javascript">
+        var mostrar = $(".aba")
+        var esconder = $(".texto")
+    
+        mostrar.on('click', function(event){
+            var numero = $(event.target).data('show')
+            $(".texto").hide()
+            $("#tab-" + numero).show()
+        })
+
     </script>
+
 </body>
 
 </html>
