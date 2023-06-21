@@ -19,3 +19,25 @@
 ul{
     list-style-type: none;
 }
+
+body{
+    background-color: #36393e;
+    color:whitesmoke
+}
+
+a{
+    color: #ff8164
+
+}
+a:hover{
+    color:aqua
+}
+button:hover{
+    color:red
+}
+
+button{
+    border-color:black;
+    border-radius: 25px;
+    margin:2px;
+}
