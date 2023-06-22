@@ -40,7 +40,7 @@ $result = $bd->query($sql)->fetchAll();
             <span id="tab-2" class="texto" style="display:none">Esta página está com um texto mais ou menos sobre cavalos <br /></span>
             <span id="tab-3" class="texto" style="display:none">Esta página está com alguma coisa ai<br /></span>
             <span id="tab-4" class="texto" style="display:none" > 
-                <input type="text" name="filtragem" id="filtro" />
+                <input type="text" name="filtragem" id="filtro" placeholder="Filtrar..." />
                 <ul id="nomes-filtrados"> </ul>
             </span>
             <span id="tab-5" class="texto" style="display:none">
@@ -54,7 +54,15 @@ $result = $bd->query($sql)->fetchAll();
                 <ul>
                 <?php
                     for ($x = 0; $x < count($result); $x++) {
-                         echo "<li><a href='blacklist.php?rotina=del&ID=" . $result[$x]['ID'] . "'>[Excluir]</a> " . $result[$x]["Nome"] . " " . $result[$x]["Nivel"] . "</li>";
+                        $ID = $result[$x]['ID'];
+                        $nome = $result[$x]['Nome'];
+                        $nivel = $result[$x]['Nivel'];
+
+
+echo "<li id=\"item-id\"> 
+        <a href='blacklist.php?rotina=del&ID=$ID'\>[Excluir]</a><a href=\"#\" onclick=\"btn_edit(event)\" class=\"edit\" data-id=\"$ID\">[Editar]</a>  <span class=\"nome\"> $nome </span> - <span class=\"nivel\"> $nivel </span>
+        </li>";
+
                     }
                 ?>
                 </ul>

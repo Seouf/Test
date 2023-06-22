@@ -26,9 +26,14 @@ var_dump($result);
     $id = $_GET['ID'];
     $sql= "DELETE FROM `bloqueados` WHERE `ID` = \"$id\"";
     $result = $bd->exec($sql);
-}
-
-else {
+} elseif ($rotina =="edit"){
+ $nome= $_POST['Nicks'];
+ $nivel= $_POST['Nivel'];
+ $id= $_POST['ID'];
+ var_dump($_POST);
+ $sql="UPDATE `bloqueados` SET `Nome` = \"$nome\", `Nivel` = \"$nivel\" WHERE ID=\"$id\"";
+ $bd->exec($sql);
+} else {
     echo "Rotina não encontrada";
     }
 
