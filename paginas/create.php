@@ -19,7 +19,7 @@ if ($execute) {
 <html>
     <head>
         <title>Criar um novo Post</title>
-        <link rel="stylesheet" type="text/css" href="custom.css" />
+        <link rel="stylesheet" type="text/css" href="../indexstyles/pagecustom.css" />
     </head>
     <body>
 <?php
@@ -30,6 +30,9 @@ if ($execute) {
 
         <form action="create.php" method="POST">
             <div class="margincreate">
+                <label for="title">Title:</label>
+            </div>
+            <div class="margincreate">
             <input type="text" name="title" placeholder="Title..."/>
             </div>
             <div class="margincreate">
@@ -39,7 +42,12 @@ if ($execute) {
             <textarea  id="description" name="description" rows="10" cols="50" placeholder="Description..."></textarea>
             </div>
             <div class="margincreate">
+                <label for="author">Author:</label>
+            </div>
+            <div class="margincreate">
             <input type="text" name="author" placeholder="Author..."/>
+            </div>
+            <div class="margincreate">
             <button type="submit">Submit</button>
             </div> </form>
 <?php
@@ -48,3 +56,6 @@ if ($execute) {
 <?php } ?>
     </body>
 </html>
+
+
+
